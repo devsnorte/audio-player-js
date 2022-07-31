@@ -1,2 +1,2 @@
-import Button from './Button';
-export { Button };
+import Player from './Player';
+export { Player };

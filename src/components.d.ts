@@ -6,34 +6,73 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppButton {
+    interface DnNextButton {
         "label": string;
+    }
+    interface DnPlayer {
+    }
+    interface DnPrevButton {
+    }
+    interface DnSlider {
     }
 }
 declare global {
-    interface HTMLAppButtonElement extends Components.AppButton, HTMLStencilElement {
+    interface HTMLDnNextButtonElement extends Components.DnNextButton, HTMLStencilElement {
     }
-    var HTMLAppButtonElement: {
-        prototype: HTMLAppButtonElement;
-        new (): HTMLAppButtonElement;
+    var HTMLDnNextButtonElement: {
+        prototype: HTMLDnNextButtonElement;
+        new (): HTMLDnNextButtonElement;
+    };
+    interface HTMLDnPlayerElement extends Components.DnPlayer, HTMLStencilElement {
+    }
+    var HTMLDnPlayerElement: {
+        prototype: HTMLDnPlayerElement;
+        new (): HTMLDnPlayerElement;
+    };
+    interface HTMLDnPrevButtonElement extends Components.DnPrevButton, HTMLStencilElement {
+    }
+    var HTMLDnPrevButtonElement: {
+        prototype: HTMLDnPrevButtonElement;
+        new (): HTMLDnPrevButtonElement;
+    };
+    interface HTMLDnSliderElement extends Components.DnSlider, HTMLStencilElement {
+    }
+    var HTMLDnSliderElement: {
+        prototype: HTMLDnSliderElement;
+        new (): HTMLDnSliderElement;
     };
     interface HTMLElementTagNameMap {
-        "app-button": HTMLAppButtonElement;
+        "dn-next-button": HTMLDnNextButtonElement;
+        "dn-player": HTMLDnPlayerElement;
+        "dn-prev-button": HTMLDnPrevButtonElement;
+        "dn-slider": HTMLDnSliderElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppButton {
+    interface DnNextButton {
         "label"?: string;
     }
+    interface DnPlayer {
+    }
+    interface DnPrevButton {
+    }
+    interface DnSlider {
+    }
     interface IntrinsicElements {
-        "app-button": AppButton;
+        "dn-next-button": DnNextButton;
+        "dn-player": DnPlayer;
+        "dn-prev-button": DnPrevButton;
+        "dn-slider": DnSlider;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-button": LocalJSX.AppButton & JSXBase.HTMLAttributes<HTMLAppButtonElement>;
+            "dn-next-button": LocalJSX.DnNextButton & JSXBase.HTMLAttributes<HTMLDnNextButtonElement>;
+            "dn-player": LocalJSX.DnPlayer & JSXBase.HTMLAttributes<HTMLDnPlayerElement>;
+            "dn-prev-button": LocalJSX.DnPrevButton & JSXBase.HTMLAttributes<HTMLDnPrevButtonElement>;
+            "dn-slider": LocalJSX.DnSlider & JSXBase.HTMLAttributes<HTMLDnSliderElement>;
         }
     }
 }
