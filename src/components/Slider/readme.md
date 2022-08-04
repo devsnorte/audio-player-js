@@ -5,18 +5,12 @@
 <!-- Auto Generated Below -->
 
 
-## Dependencies
+## Events
 
-### Used by
+| Event          | Description | Type               |
+| -------------- | ----------- | ------------------ |
+| `sliderChange` |             | `CustomEvent<any>` |
 
- - [dn-player](../Player)
-
-### Graph
-```mermaid
-graph TD;
-  dn-player --> dn-slider
-  style dn-slider fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

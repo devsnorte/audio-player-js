@@ -12,18 +12,12 @@
 | `label`  | `label`   |             | `string` | `undefined` |
 
 
-## Dependencies
+## Events
 
-### Used by
+| Event             | Description | Type               |
+| ----------------- | ----------- | ------------------ |
+| `nextButtonClick` |             | `CustomEvent<any>` |
 
- - [dn-player](../Player)
-
-### Graph
-```mermaid
-graph TD;
-  dn-player --> dn-next-button
-  style dn-next-button fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

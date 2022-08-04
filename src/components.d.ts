@@ -16,6 +16,18 @@ export namespace Components {
     interface DnSlider {
     }
 }
+export interface DnNextButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDnNextButtonElement;
+}
+export interface DnPrevButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDnPrevButtonElement;
+}
+export interface DnSliderCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDnSliderElement;
+}
 declare global {
     interface HTMLDnNextButtonElement extends Components.DnNextButton, HTMLStencilElement {
     }
@@ -51,12 +63,15 @@ declare global {
 declare namespace LocalJSX {
     interface DnNextButton {
         "label"?: string;
+        "onNextButtonClick"?: (event: DnNextButtonCustomEvent<any>) => void;
     }
     interface DnPlayer {
     }
     interface DnPrevButton {
+        "onPrevButtonClick"?: (event: DnPrevButtonCustomEvent<any>) => void;
     }
     interface DnSlider {
+        "onSliderChange"?: (event: DnSliderCustomEvent<any>) => void;
     }
     interface IntrinsicElements {
         "dn-next-button": DnNextButton;

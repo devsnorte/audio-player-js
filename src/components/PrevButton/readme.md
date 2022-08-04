@@ -5,18 +5,12 @@
 <!-- Auto Generated Below -->
 
 
-## Dependencies
+## Events
 
-### Used by
+| Event             | Description | Type               |
+| ----------------- | ----------- | ------------------ |
+| `prevButtonClick` |             | `CustomEvent<any>` |
 
- - [dn-player](../Player)
-
-### Graph
-```mermaid
-graph TD;
-  dn-player --> dn-prev-button
-  style dn-prev-button fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 
