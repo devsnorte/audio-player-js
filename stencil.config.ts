@@ -21,11 +21,11 @@ export const config: Config = {
     },
     vue({
       componentCorePackage: 'dn-audio-player', // i.e.: stencil-library
-      proxiesFile: './dist/vue/index.js',
+      proxiesFile: './dist/vue/index.ts',
     }),
     react({
       componentCorePackage: 'dn-audio-player',
-      proxiesFile: './dist/react/index.js',
+      proxiesFile: './dist/react/index.ts',
     }),
   ],
 };
