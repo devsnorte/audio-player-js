@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
 
-    <script type="module" src="/build/dn-audio-player-js.esm.js"></script>
-    <script nomodule src="/build/dn-audio-player-js.js"></script>
+    <script type="module" src="/build/dn-audio-player.esm.js"></script>
+    <script nomodule src="/build/dn-audio-player.js"></script>
   </head>
   <body>
     <dn-player>
@@ -15,12 +15,13 @@
           <i data-feather="skip-back"></i>
         </button>
       </dn-prev-button>
-      <dn-slider></dn-slider>
+      <dn-play-button><button>Play</button></dn-play-button>
       <dn-next-button>
         <button>
           <i data-feather="skip-forward"></i>
         </button>
       </dn-next-button>
+      <dn-slider class-name=""></dn-slider>
     </dn-player>
   </body>
 </html>

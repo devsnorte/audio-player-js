@@ -9,11 +9,14 @@ export namespace Components {
     interface DnNextButton {
         "label": string;
     }
+    interface DnPlayButton {
+    }
     interface DnPlayer {
     }
     interface DnPrevButton {
     }
     interface DnSlider {
+        "className": string;
     }
 }
 export interface DnNextButtonCustomEvent<T> extends CustomEvent<T> {
@@ -35,6 +38,12 @@ declare global {
         prototype: HTMLDnNextButtonElement;
         new (): HTMLDnNextButtonElement;
     };
+    interface HTMLDnPlayButtonElement extends Components.DnPlayButton, HTMLStencilElement {
+    }
+    var HTMLDnPlayButtonElement: {
+        prototype: HTMLDnPlayButtonElement;
+        new (): HTMLDnPlayButtonElement;
+    };
     interface HTMLDnPlayerElement extends Components.DnPlayer, HTMLStencilElement {
     }
     var HTMLDnPlayerElement: {
@@ -55,6 +64,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "dn-next-button": HTMLDnNextButtonElement;
+        "dn-play-button": HTMLDnPlayButtonElement;
         "dn-player": HTMLDnPlayerElement;
         "dn-prev-button": HTMLDnPrevButtonElement;
         "dn-slider": HTMLDnSliderElement;
@@ -65,16 +75,20 @@ declare namespace LocalJSX {
         "label"?: string;
         "onNextButtonClick"?: (event: DnNextButtonCustomEvent<any>) => void;
     }
+    interface DnPlayButton {
+    }
     interface DnPlayer {
     }
     interface DnPrevButton {
         "onPrevButtonClick"?: (event: DnPrevButtonCustomEvent<any>) => void;
     }
     interface DnSlider {
+        "className"?: string;
         "onSliderChange"?: (event: DnSliderCustomEvent<any>) => void;
     }
     interface IntrinsicElements {
         "dn-next-button": DnNextButton;
+        "dn-play-button": DnPlayButton;
         "dn-player": DnPlayer;
         "dn-prev-button": DnPrevButton;
         "dn-slider": DnSlider;
@@ -85,6 +99,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "dn-next-button": LocalJSX.DnNextButton & JSXBase.HTMLAttributes<HTMLDnNextButtonElement>;
+            "dn-play-button": LocalJSX.DnPlayButton & JSXBase.HTMLAttributes<HTMLDnPlayButtonElement>;
             "dn-player": LocalJSX.DnPlayer & JSXBase.HTMLAttributes<HTMLDnPlayerElement>;
             "dn-prev-button": LocalJSX.DnPrevButton & JSXBase.HTMLAttributes<HTMLDnPrevButtonElement>;
             "dn-slider": LocalJSX.DnSlider & JSXBase.HTMLAttributes<HTMLDnSliderElement>;

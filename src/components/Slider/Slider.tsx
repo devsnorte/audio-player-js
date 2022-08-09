@@ -1,7 +1,8 @@
-import { Component, h, Event, EventEmitter } from '@stencil/core';
+import { Component, h, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
   tag: 'dn-slider',
+  styleUrl: 'Slider.styles.css',
 })
 export class Slider {
   // Indicate that name should be a public property on the component
@@ -12,7 +13,11 @@ export class Slider {
     bubbles: true,
   })
   sliderChange: EventEmitter;
+
+  @Prop()
+  className: string;
+
   render() {
-    return <input type="range" onChange={this.sliderChange.emit}></input>;
+    return <input type="range" class={this.className || 'slider'} onChange={this.sliderChange.emit}></input>;
   }
 }
